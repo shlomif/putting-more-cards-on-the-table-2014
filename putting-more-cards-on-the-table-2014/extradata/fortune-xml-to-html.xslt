@@ -47,8 +47,8 @@ namespace-->
     <div class="section">
         <h2 id="{@id}"><xsl:call-template name="get_header" /></h2>
         <xsl:choose>
-            <xsl:when test="body/text">
-                <xsl:apply-templates select="body/text" />
+            <xsl:when test="text">
+                <xsl:apply-templates select="text" />
             </xsl:when>
             <!--
             <xsl:when test="irc">

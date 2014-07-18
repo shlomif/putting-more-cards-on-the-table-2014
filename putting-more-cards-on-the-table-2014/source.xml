@@ -8,8 +8,8 @@
             <head>
                 <title>Introduction</title>
             </head>
-            <body>
-                <text>
+            <text>
+                <body>
 
                     <p>
                         Since <a
@@ -32,16 +32,16 @@
                         some stories, screenplays, aphorisms, etc. So here goes.
                     </p>
 
-                </text>
-            </body>
+                </body>
+            </text>
         </sect>
 
         <sect id="time_is_more_important_than_money">
             <head>
                 <title>Time ≫ Money</title>
             </head>
-            <body>
-                <text>
+            <text>
+                <body>
 
                     <p>
                         Many people I know are being far too much misers: they
@@ -53,8 +53,8 @@
                         than a small gain of money.
                     </p>
 
-                </text>
-            </body>
+                </body>
+            </text>
         </sect>
     </sections>
 </article>

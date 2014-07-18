@@ -26,8 +26,8 @@
                 <data type="ID"/>
             </attribute>
             <ref name="head" />
-            <element name="body">
-                    <element name="text">
+            <element name="text">
+                    <element name="body">
                         <ref name="regular_html_text" />
                     </element>
                     <!--
