@@ -28,12 +28,16 @@ namespace-->
 </xsl:template>
 
 <xsl:template match="/article">
+    <xsl:variable name="article_title">
+        <xsl:value-of select="head/title" />
+    </xsl:variable>
     <html xml:lang="en-US">
         <head>
-            <title><xsl:value-of select="meta/title" /></title>
+            <title><xsl:value-of select="$article_title" /></title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         </head>
         <body>
+            <h1><xsl:value-of select="$article_title" /></h1>
             <xsl:apply-templates select="sections/sect" />
         </body>
     </html>
@@ -110,8 +114,8 @@ namespace-->
 
 <xsl:template name="get_header">
     <xsl:choose>
-        <xsl:when test="meta/title">
-            <xsl:value-of select="meta/title" />
+        <xsl:when test="head/title">
+            <xsl:value-of select="head/title" />
         </xsl:when>
         <xsl:otherwise>
             <xsl:call-template name="get_irc_default_header" />
