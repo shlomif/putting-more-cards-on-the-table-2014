@@ -28,7 +28,6 @@
             <element name="body">
                     <element name="text">
                         <ref name="regular_html_text" />
-                        <ref name="common_info" />
                     </element>
                     <!--
                 <element name="irc">
