@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <article>
-    <head />
+    <head>
+        <title>Putting More Cards on the Table (2014)</title>
+    </head>
     <sections>
         <sect id="intro">
-            <meta>
+            <head>
                 <title>Introduction</title>
-            </meta>
+            </head>
             <body>
                 <text>
 
@@ -35,9 +37,9 @@
         </sect>
 
         <sect id="time_is_more_important_than_money">
-            <meta>
+            <head>
                 <title>Time ≫ Money</title>
-            </meta>
+            </head>
             <body>
                 <text>
 

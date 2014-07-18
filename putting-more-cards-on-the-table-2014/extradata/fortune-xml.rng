@@ -5,9 +5,7 @@
     >
     <start>
         <element name="article">
-            <element name="head">
-                <empty/>
-            </element>
+            <ref name="head" />
             <element name="sections">
                 <oneOrMore>
                     <ref name="sect" />
@@ -15,16 +13,19 @@
             </element>
         </element>
     </start>
+    <define name="head">
+        <element name="head">
+            <element name="title">
+                <text/>
+            </element>
+        </element>
+    </define>
     <define name="sect">
         <element name="sect">
             <attribute name="id">
                 <data type="ID"/>
             </attribute>
-            <element name="meta">
-                <element name="title">
-                    <text/>
-                </element>
-            </element>
+            <ref name="head" />
             <element name="body">
                     <element name="text">
                         <ref name="regular_html_text" />
