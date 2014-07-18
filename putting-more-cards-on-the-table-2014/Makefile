@@ -6,5 +6,7 @@ test:
 output: out.xhtml
 
 XSLT_SS = extradata/fortune-xml-to-html.xslt
+
 out.xhtml: source.xml $(XSLT_SS)
 	xsltproc --output $@ $(XSLT_SS) $<
+	tidyp -quiet -errors -utf8 -xml ./out.xhtml
