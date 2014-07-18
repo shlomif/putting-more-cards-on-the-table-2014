@@ -27,41 +27,36 @@ namespace-->
     </xsl:element>
 </xsl:template>
 
-<xsl:template match="/collection">
+<xsl:template match="/article">
     <html xml:lang="en-US">
         <head>
             <title>Fortunes</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         </head>
         <body>
-            <xsl:choose>
-                <xsl:when test="$fortune.id">
-                    <xsl:apply-templates select="list/fortune[@id=$fortune.id]" />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:apply-templates select="list/fortune" />
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:apply-templates select="sections/sect" />
         </body>
     </html>
 </xsl:template>
 
-<xsl:template match="fortune">
-    <div class="fortune">
-        <h3 id="{@id}"><xsl:call-template name="get_header" /></h3>
+<xsl:template match="sect">
+    <div class="section">
+        <h2 id="{@id}"><xsl:call-template name="get_header" /></h2>
         <xsl:choose>
+            <xsl:when test="body/text">
+                <xsl:apply-templates select="body/text" />
+            </xsl:when>
+            <!--
             <xsl:when test="irc">
                 <xsl:apply-templates select="irc" />
             </xsl:when>
             <xsl:when test="raw">
                 <xsl:apply-templates select="raw" />
             </xsl:when>
-            <xsl:when test="quote">
-                <xsl:apply-templates select="quote" />
-            </xsl:when>
             <xsl:when test="screenplay">
                 <xsl:apply-templates select="screenplay" mode="screenplay_wrapper"/>
             </xsl:when>
+            -->
 
         </xsl:choose>
     </div>
@@ -141,11 +136,8 @@ namespace-->
     <xsl:call-template name="render_info" />
 </xsl:template>
 
-<xsl:template match="quote">
-    <blockquote>
-        <xsl:apply-templates select="body/*" mode="copy-html-ns"/>
-    </blockquote>
-    <xsl:call-template name="render_info" />
+<xsl:template match="text">
+    <xsl:apply-templates select="body/*" mode="copy-html-ns"/>
 </xsl:template>
 
 
