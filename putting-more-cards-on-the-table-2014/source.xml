@@ -6,8 +6,8 @@
             <meta>
                 <title>Introduction</title>
             </meta>
-            <text>
-                <body>
+            <body>
+                <text>
 
                     <p>
                         Since <a
@@ -30,16 +30,16 @@
                         some stories, screenplays, aphorisms, etc. So here goes.
                     </p>
 
-                </body>
-            </text>
+                </text>
+            </body>
         </sect>
 
         <sect id="time_is_more_important_than_money">
             <meta>
                 <title>Time ≫ Money</title>
             </meta>
-            <text>
-                <body>
+            <body>
+                <text>
 
                     <p>
                         Many people I know are being far too much misers: they
@@ -51,8 +51,8 @@
                         than a small gain of money.
                     </p>
 
-                </body>
-            </text>
+                </text>
+            </body>
         </sect>
     </sections>
 </article>
